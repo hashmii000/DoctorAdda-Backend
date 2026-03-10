@@ -1,0 +1,68 @@
+📚 API Documentation Overview
+
+1. Auth APIs
+POST /api/auth/register - Register user with OTP
+POST /api/auth/login - Login with OTP
+POST /api/auth/verify - Verify OTP
+POST /api/auth/resend-otp - Resend OTP
+
+
+
+2. User APIs
+GET /api/user/profile - Get user profile
+PUT /api/user/update - Update profile and settings
+
+
+
+3. Doctor APIs
+POST /api/doctor/create - Register doctor
+GET /api/doctor/list - Get list of doctors
+PUT /api/doctor/update/:id - Update doctor profile
+POST /api/doctor/set-availability - Set available slots
+
+
+4. Hospital APIs
+POST /api/hospital/create - Add hospital
+GET /api/hospital/list - List all hospitals
+GET /api/hospital/:id - Get details of a hospital
+PUT /api/hospital/update/:id - Update hospital info
+
+
+5. Booking APIs
+POST /api/booking/create - Book appointments
+GET /api/booking/user/:id - View user bookings
+PUT /api/booking/cancel/:id - Cancel a booking
+General Physician – Dr. Priya Sharma
+_id: 67f3838e9d2d7704f47ac1ca
+
+Skin & Hair – Dr. Rajat Verma
+_id: 67f383999d2d7704f47ac1cc
+
+Women’s Health – Dr. Sneha Kapoor
+_id: 67f383a59d2d7704f47ac1ce
+
+Dental Care – Dr. Amit Sinha
+_id: 67f383af9d2d7704f47ac1d0
+
+Child Specialist – Dr. Nisha Rao
+_id: 67f383c09d2d7704f47ac1d2
+
+ENT (Ear,Nose,Throat) – Dr. Kunal Mehra
+_id: 67f4b578647a3a6e419141ef
+
+Cardiologist (Heart) – Dr. Reena Joseph
+_id: 67f6103e040b92fed0a2561b
+
+Neurologist (Brain) – Dr. Arvind Das
+_id: 67f61067040b92fed0a2561d
+
+Orthopedic (Bone & Joint) – Dr. Meera Singh
+_id: 67f61078040b92fed0a2561f
+
+Gastroenterologist (Stomach) – Dr. Aditya Nair
+_id: 67f6109f040b92fed0a25625
+
+
+1. veriy token -Save async 
+2. 
+
