@@ -4,19 +4,13 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'backend/**'
-      - '*.js'
-      - 'package.json'
 
 jobs:
-  deploy-backend:
-
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-
-      - name: Deploy backend to VPS
+      - name: Deploy backend via SSH
         uses: appleboy/ssh-action@v1
 
         with:
@@ -27,13 +21,7 @@ jobs:
           script: |
             powershell -Command "
             cd 'C:\project\doctoradda\DoctorAdda-Backend';
-
-            Write-Host 'Pull latest code';
             git pull origin main;
-
-            Write-Host 'Install dependencies if needed';
             npm install --production;
-
-            Write-Host 'Reload backend with PM2';
             pm2 reload index;
             "
