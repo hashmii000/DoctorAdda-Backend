@@ -1,3 +1,4 @@
+
 name: Deploy Backend
 
 on:
@@ -18,7 +19,18 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
             cd C:/project/doctoradda/DoctorAdda-Backend
+            
+            echo "📥 Pulling latest code..."
             git pull origin main
+
+            echo "📦 Installing dependencies..."
             npm install --production
-            pm2 restart all
+
+            echo "🔄 Restarting backend..."
+            pm2 delete all
+            pm2 start index.js
+
+            echo "💾 Saving PM2 process..."
             pm2 save
+
+            echo "✅ Deployment completed successfully!"
