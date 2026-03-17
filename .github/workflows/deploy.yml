@@ -17,19 +17,4 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            powershell -Command "
-              cd 'C:\project\doctoradda\DoctorAdda-Backend';
-
-              Write-Host '📥 Pulling latest code...';
-              git pull origin main;
-
-              Write-Host '📦 Installing dependencies...';
-              npm install --production;
-
-              Write-Host '🔄 Restarting backend...';
-              C:\Users\Administrator\AppData\Roaming\npm\pm2.cmd delete all;
-              C:\Users\Administrator\AppData\Roaming\npm\pm2.cmd start index.js;
-              C:\Users\Administrator\AppData\Roaming\npm\pm2.cmd save;
-
-              Write-Host '✅ Deployment Done';
-            "
+            C:\deploy-backend.bat
